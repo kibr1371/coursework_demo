@@ -1,8 +1,12 @@
 name: Demo
-on: [issue_comment]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
-    my_first_job:
+    main:
         runs-on: ubuntu-latest
         name: Just a simple demo job
         steps:
